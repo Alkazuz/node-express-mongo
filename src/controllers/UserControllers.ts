@@ -5,7 +5,7 @@ import {User} from '../models/Users'
 export default{
     async create(request:Request, response:Response){
         const { name, email, cpf} = request.body;
-        const existing = await User.findOnde({email});
+        const existing = await User.findOne({email});
 
         if(!existing){
             const user = await User.create({name, email, cpf})
