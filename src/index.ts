@@ -4,6 +4,8 @@ import cors from 'cors';
 import 'dotenv/config'
 import morgan from 'morgan';
 
+import userRoutes from './routes/users';
+
 const PORT = process.env.PORT || 3000;
 const MONGOURL  = process.env.MONGOURL || "";
 
